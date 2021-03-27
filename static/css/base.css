@@ -1,0 +1,107 @@
+/* Color pallet as based on the Clean and Modern look from https://visme.co/blog/website-color-schemes 
+#17252A - Dark Text
+#2B7A78 - Dark Highlights
+#3AAfA9 - Main color
+#DEF2F1 - Light Highlights
+#FEFFFF - Light Text
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+/*    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
+    background-color: #3aafa9;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Source Sans Pro';
+    font-size: 48px;
+}
+
+/* Header */
+
+/* Taken from lesson which took from Bulma, check if need to use, allows icon consistency:
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+*/
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* ------------------------------- Buttons */
+.btn-main {
+    background: #17252A;
+    color: #FEFFFF;
+}
+
+.btn-main:hover,
+.btn-main:active,
+.btn-main:focus {
+    background: #def2f1;
+    color: #2b7a78;
+}
+
+/* ------------------------------- Text */
+
+.text-dark {
+    color: #17252A !important;
+}
+
+.text-light {
+    color: #FEFFFF !important;
+}
+
+/* ------------------------------- Background Colors */
+
+.background-main {
+    background: #3AAFA9 !important;
+}
+
+.background-header {
+    background: #17252A !important;
+}
+
+.background-highlight-dark {
+    background: #2B7A78 !important;
+}
+
+.background-highlight-light {
+    background: #def2f1 !important;
+}
+
+/* ------------------------------- Borders */
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* ------------------------------- Media queries for screen sizes */
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 162px;
+    }
+}
