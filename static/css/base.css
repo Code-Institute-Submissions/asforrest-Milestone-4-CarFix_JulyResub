@@ -12,7 +12,8 @@ html {
 
 body {
 /*    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
-    background-color: #3aafa9;
+    background: url('/media/aaron-huber-KxeFuXta4SE-unsplash-CarFixEdit.jpg') no-repeat center center fixed;
+    /* background-color: #3aafa9; */
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -20,9 +21,8 @@ body {
     font-size: 48px;
 }
 
-/* Header */
-
-/* Taken from lesson which took from Bulma, check if need to use, allows icon consistency:
+/* ------------------------------- Center Font Awesome Icons */
+/* from Bulma to keep Font Awesome icons centered, this method is from Code Institute lessons */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -30,7 +30,12 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
-*/
+
+/* ------------------------------- Buttons */
+
+.logo-font {
+    text-transform: uppercase;
+}
 
 .main-logo-link {
     width: fit-content;
@@ -47,6 +52,19 @@ body {
 .btn-main:focus {
     background: #def2f1;
     color: #2b7a78;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 /* ------------------------------- Text */
@@ -83,6 +101,10 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
 /* ------------------------------- Media queries for screen sizes */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -102,6 +124,6 @@ body {
     }
 
     .header-container {
-        padding-top: 162px;
+        padding-top: 164px;
     }
 }
