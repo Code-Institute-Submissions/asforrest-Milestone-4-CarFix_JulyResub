@@ -18,7 +18,6 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Source Sans Pro';
-    font-size: 48px;
 }
 
 /* ------------------------------- Center Font Awesome Icons */
@@ -111,10 +110,10 @@ body {
     .container {
         max-width: 80%;
     }
-}
+} 
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+ @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
