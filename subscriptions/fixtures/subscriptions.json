@@ -1,0 +1,43 @@
+[{
+"pk": 1,
+"model": "subscriptions.subscription",
+"fields": {
+"sku": "cf001b",
+"name": "CarFix Basic",
+"description": "CarFix provides you with the best location for infromation about your car about how to do your own repairs and maintenance. Use our professional guides to preform simple oil changes to more complicated engine rebuilds.",
+"price": 19.99,
+"discounts": true,
+"database_access": true,
+"forum_access": true,
+"email_support": true,
+"chat_support": false,
+"video_guides": false,
+"video_conferencing": false,
+"category": 1,
+"rating": 3,
+"image_url": "https://i.ibb.co/zFjjGjF/Car-Fix-Pro-Logo.png",
+"image": "Car-Fix-Pro-Logo.png"
+}
+},
+{
+"pk": 2,
+"model": "subscriptions.subscription",
+"fields": {
+"sku": "cf002p",
+"name": "CarFixPro",
+"description": "CarFix Pro provides you with a whole new level of personalised service. Get professional help on demand including the option for monthly video conferencing with your mechanic. When your looking to go deeper and learn fast this is the best choice!",
+"price": 49.99,
+"discounts": true,
+"database_access": true,
+"forum_access": true,
+"email_support": true,
+"chat_support": true,
+"video_guides": true,
+"video_conferencing": true,
+"category": 1,
+"rating": 5,
+"image_url": "https://i.ibb.co/QY091Wf/Car-Fix-Logo.png",
+"image": "Car-Fix-Logo.png"
+}
+}
+]
