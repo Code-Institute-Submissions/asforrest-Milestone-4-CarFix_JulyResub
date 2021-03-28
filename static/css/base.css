@@ -72,25 +72,34 @@ body {
     color: #17252A !important;
 }
 
+.text-dark:hover,
+.text-dark:active,
+.text-dark:focus {
+    color: #2b7a78 !important;
+}
+
+
 .text-light {
     color: #FEFFFF !important;
 }
 
+
+
 /* ------------------------------- Background Colors */
 
-.background-main {
+.bg-main {
     background: #3AAFA9 !important;
 }
 
-.background-header {
+.bg-header {
     background: #17252A !important;
 }
 
-.background-highlight-dark {
+.bg-highlight-dark {
     background: #2B7A78 !important;
 }
 
-.background-highlight-light {
+.bg-highlight-light {
     background: #def2f1 !important;
 }
 
