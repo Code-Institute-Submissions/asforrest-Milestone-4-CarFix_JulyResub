@@ -15,8 +15,8 @@
 "video_conferencing": false,
 "category": 1,
 "rating": 3,
-"image_url": "https://i.ibb.co/zFjjGjF/Car-Fix-Pro-Logo.png",
-"image": "Car-Fix-Pro-Logo.png"
+"image_url": "https://i.ibb.co/QY091Wf/Car-Fix-Logo.png",
+"image": "Car-Fix-Logo.png"
 }
 },
 {
@@ -24,7 +24,7 @@
 "model": "subscriptions.subscription",
 "fields": {
 "sku": "cf002p",
-"name": "CarFixPro",
+"name": "CarFix Pro",
 "description": "CarFix Pro provides you with a whole new level of personalised service. Get professional help on demand including the option for monthly video conferencing with your mechanic. When your looking to go deeper and learn fast this is the best choice!",
 "price": 49.99,
 "discounts": true,
@@ -36,8 +36,8 @@
 "video_conferencing": true,
 "category": 1,
 "rating": 5,
-"image_url": "https://i.ibb.co/QY091Wf/Car-Fix-Logo.png",
-"image": "Car-Fix-Logo.png"
+"image_url":  "https://i.ibb.co/zFjjGjF/Car-Fix-Pro-Logo.png",
+"image": "Car-Fix-Pro-Logo.png"
 }
 }
 ]
