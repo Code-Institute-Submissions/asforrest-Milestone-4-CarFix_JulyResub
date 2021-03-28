@@ -103,7 +103,9 @@ body {
     background: #def2f1 !important;
 }
 
-/* ------------------------------- Overlay */
+/* ------------------------------- Overlays */
+
+/* For testing on homepage
 .overlay {
   position: fixed;
   display: none;
@@ -116,7 +118,18 @@ body {
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
   cursor: pointer;
+}*/
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1
 }
+
 
 
 /* ------------------------------- Borders */
