@@ -86,21 +86,30 @@ body {
 
 
 /* ------------------------------- Background Colors */
-
-.bg-main {
-    background: #3AAFA9 !important;
-}
-
-.bg-header {
+.bg-dark, .bg-header {
     background: #17252A !important;
 }
 
-.bg-highlight-dark {
+.bg-medium-dark, .bg-highlight-dark {
     background: #2B7A78 !important;
 }
 
-.bg-highlight-light {
+.bg-medium, .bg-main {
+    background: #3AAFA9 !important;
+}
+
+
+.bg-medium-light, .bg-highlight-light {
     background: #def2f1 !important;
+}
+
+.bg-light {
+    background: #FEFFFF !important;    
+}
+
+
+.bg-black, .bg-marketing-header {
+    background: #000000 !important;
 }
 
 /* ------------------------------- Overlays */
