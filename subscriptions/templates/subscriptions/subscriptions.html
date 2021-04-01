@@ -26,7 +26,8 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="card h-100 border-0 card-subscriptions-page">
                                 {% if subscription.image %}
-                                <a href="">
+                                <!-- HERE IS THE CURRENT ISSUE WITH THE LINK TO THE SUBSCRIPTION DETAILS, it should return subscriptions/1 -->
+                                <a href="{% url 'subscription_detail' subscription.id %}">
                                     <img class="card-img-top img-fluid" src="{{ subscription.image.url }}" alt="{{ subscription.name }}">
                                 </a>
                                 {% else %}
