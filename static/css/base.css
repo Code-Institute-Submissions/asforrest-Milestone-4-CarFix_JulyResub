@@ -147,6 +147,15 @@ body {
     border: 1px solid black !important;
 }
 
+
+/* ------------------------------- Cards */
+
+.card-subscriptions-page {
+    padding: 32px;
+    background: #DEF2F1;
+
+}
+
 /* ------------------------------- Media queries for screen sizes */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
