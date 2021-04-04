@@ -3,117 +3,104 @@
     "pk": 1,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "audi",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "audi",
+    "friendly_name": "Audi"
 }
 },
 {
     "pk": 2,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "bmw",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "bmw",
+    "friendly_name": "BMW"
 }
 },
 {
     "pk": 3,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "ford",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "ford",
+    "friendly_name": "Ford"
 }
 },
 {
     "pk": 4,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "honda",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "honda",
+    "friendly_name": "Honda"
 }
 },
 {
     "pk": 5,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "hyundai",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "hyundai",
+    "friendly_name": "Hyundai"
 }
 },
 {
     "pk": 6,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "mercedes",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "mercedes",
+    "friendly_name": "Mercedes"
 }
 },
 {
     "pk": 7,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "nissan",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "nissan",
+    "friendly_name": "Nissan"
 }
 },
 {
     "pk": 8,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "opel",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "opel",
+    "friendly_name": "Opel"
 }
 },
 {
     "pk": 9,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "peugeot",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "peugeot",
+    "friendly_name": "Peugeot"
 }
 },
 {
     "pk": 10,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "porche",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "porsche",
+    "friendly_name": "Porsche"
 }
 },
 {
     "pk": 11,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "renault",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "renault",
+    "friendly_name": "Renault"
 }
 },
 {
     "pk": 12,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "toyota",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "toyota",
+    "friendly_name": "Toyota"
 }
 },
 {
     "pk": 13,
     "model": "mechanics.brand",
     "fields": {
-    "brand": "volkswagen",
-    "name": "brand",
-    "friendly_name": "Car Brand"
+    "name": "volkswagen",
+    "friendly_name": "Volkswagen"
 }
 }
 ]
