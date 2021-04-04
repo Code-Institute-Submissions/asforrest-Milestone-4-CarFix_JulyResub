@@ -2,24 +2,14 @@ from django.db import models
 
 # Create your models here.
 
-class Specialty(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Categories'
-    
-    name = models.CharField(max_length=254)
-    # null=True and blank=True allows the field to be optional
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+class Make(models.Model):
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.friendly_name
-
 class Mechanic(models.Model):
-    # on_delete=models.SET_NULL allows a specialty to be deleted without it deleting the product
-    specialty = models.ForeignKey('Specialty', null=True, blank=True,
+    # on_delete=models.SET_NULL allows a make to be deleted without it deleting the product
+    make = models.ForeignKey('Make', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
