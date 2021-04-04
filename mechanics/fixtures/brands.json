@@ -3,7 +3,7 @@
     "pk": 1,
     "model": "mechanics.brand",
     "fields": {
-    "make": "audi",
+    "brand": "audi",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -12,7 +12,7 @@
     "pk": 2,
     "model": "mechanics.brand",
     "fields": {
-    "make": "bmw",
+    "brand": "bmw",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -21,7 +21,7 @@
     "pk": 3,
     "model": "mechanics.brand",
     "fields": {
-    "make": "ford",
+    "brand": "ford",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -30,7 +30,7 @@
     "pk": 4,
     "model": "mechanics.brand",
     "fields": {
-    "make": "honda",
+    "brand": "honda",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -39,7 +39,7 @@
     "pk": 5,
     "model": "mechanics.brand",
     "fields": {
-    "make": "hyundai",
+    "brand": "hyundai",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -48,7 +48,7 @@
     "pk": 6,
     "model": "mechanics.brand",
     "fields": {
-    "make": "mercedes",
+    "brand": "mercedes",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -57,7 +57,7 @@
     "pk": 7,
     "model": "mechanics.brand",
     "fields": {
-    "make": "nissan",
+    "brand": "nissan",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -66,7 +66,7 @@
     "pk": 8,
     "model": "mechanics.brand",
     "fields": {
-    "make": "opel",
+    "brand": "opel",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -75,7 +75,7 @@
     "pk": 9,
     "model": "mechanics.brand",
     "fields": {
-    "make": "peugeot",
+    "brand": "peugeot",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -84,7 +84,7 @@
     "pk": 10,
     "model": "mechanics.brand",
     "fields": {
-    "make": "porche",
+    "brand": "porche",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -93,7 +93,7 @@
     "pk": 11,
     "model": "mechanics.brand",
     "fields": {
-    "make": "renault",
+    "brand": "renault",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -102,7 +102,7 @@
     "pk": 12,
     "model": "mechanics.brand",
     "fields": {
-    "make": "toyota",
+    "brand": "toyota",
     "name": "brand",
     "friendly_name": "Car Brand"
 }
@@ -111,7 +111,7 @@
     "pk": 13,
     "model": "mechanics.brand",
     "fields": {
-    "make": "volkswagen",
+    "brand": "volkswagen",
     "name": "brand",
     "friendly_name": "Car Brand"
 }

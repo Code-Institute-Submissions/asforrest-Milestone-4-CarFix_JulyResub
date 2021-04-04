@@ -39,6 +39,16 @@ Year of the pay = Year Since a Member of the Platform
 Category of celebrities fame = Specialty (This will be achieved by using a find-and-repalce on the variable used in the data to suit my own categries)
 
 
+### Python Database Migrations
+
+Before preforming any migrations to the Python database Dry Run's were utilized to make sure that there were no errors first.
+
+![Migrations Dry Run](/media/readme-images/making-migrations-dry-run.png)
+
+Then after making the migrations to check the models are correct then Plan option was used.
+
+![Migrations Dry Run](/media/readme-images/making-migrations-plan.png)
+
 
 The creator of this web app, Alexander, found it easy to put himself in the shoes of potential user due to using the product himself. 
 
