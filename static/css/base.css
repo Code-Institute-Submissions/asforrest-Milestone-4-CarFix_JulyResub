@@ -129,6 +129,10 @@ body {
   cursor: pointer;
 }*/
 
+.space-test{
+    height: 150px;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -138,7 +142,6 @@ body {
     background: white;
     z-index: -1
 }
-NO
 
 
 /* ------------------------------- Borders */
