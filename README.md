@@ -143,7 +143,12 @@ When taking the methodology into account the following process has been created:
 
 
 ### Interesting and Ongoing Bugs
-1. 
+1. Spreadsheet > CSV > JSON > Django (The Creative Solution)
+I had an issue when creating my database of mechanics. This was made in Apple Pages and exported to CSV. From there this was converted to JSON using the online converter [CSV to JSON](https://csvjson.com/csv2json). 
+
+After getting the data into JSON file I realised that it wasn't possible to import this so I though of a creative solution. I created an extra column for "field" with the value of "{" and then procdeeded to use find and replace to fix the rest of the syntax so that the JSON file would be correctly formatted to be important as a Django Fixture.
+
+![Find and replace](/media/bugs/json-to-django-solution-find-and-replace.png)
 
 ## Deployment
 

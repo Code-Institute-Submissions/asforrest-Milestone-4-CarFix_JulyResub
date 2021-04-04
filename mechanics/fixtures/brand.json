@@ -1,0 +1,119 @@
+[
+  {
+    "pk": 1,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "audi",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 2,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "bmw",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 3,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "ford",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 4,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "honda",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 5,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "hyundai",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 6,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "mercedes",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 7,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "nissan",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 8,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "opel",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 9,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "peugeot",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 10,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "porche",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 11,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "renault",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 12,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "toyota",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+},
+{
+    "pk": 13,
+    "model": "mechanics.brand",
+    "fields": {
+    "make": "volkswagen",
+    "name": "brand",
+    "friendly_name": "Car Brand"
+}
+}
+]
