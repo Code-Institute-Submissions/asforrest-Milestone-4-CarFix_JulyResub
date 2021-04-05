@@ -159,10 +159,26 @@ body {
 
 }
 
+
+/* ------------------------------- Tables */
+
+.mechanics-table {
+    margin-top: 50px;
+}
+
+/* The following table styles have been taken from W3C Schools, source: https://www.w3schools.com/css/css_table_style.asp */
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #DEF2F1;}
+
 /* ------------------------------- Supplemental CSS */
 
 .mechanic-page-brand-logos {
-    width: 100px;
+    width: 140px;
+    padding: 10px 20px 10px 0px;
 }
 
 
