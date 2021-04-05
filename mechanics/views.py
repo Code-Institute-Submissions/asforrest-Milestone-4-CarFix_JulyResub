@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Mechanic
 
 
@@ -6,9 +8,21 @@ def all_mechanics(request):
     # View to show all available mechanics
 
     mechanics = Mechanic.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(mechanic_name__icontains=query) | Q(brand__icontains=query)
+            mechanics = mechanics.filter(queries)
 
     context = {
         'mechanics': mechanics,
+        'search_term': query,
     }
 
     return render(request, 'mechanics/mechanics.html', context)

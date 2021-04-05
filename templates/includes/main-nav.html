@@ -1,22 +1,22 @@
 <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
     <ul class="nav justify-content-end">
         <li class="nav-item">
-            <a class="nav-link logo-font font-weight-bold text-dark" href="#" id="find-mechanic-link6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'mechanics' %}" id="find-mechanic-link3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
-                    <div><i class="fas fa-wrench"></i></div>
-                    <p class="my-0">CarFix</p>
+                    <div><i class="fas fa-search"></i></div>
+                    <p class="my-0">Mechanic Overview</p>
                 </div>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'mechanics' %}" id="find-mechanic-link3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'mechanics' %}" id="find-mechanic-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-search"></i></div>
-                    <p class="my-0">Find a Mechanic</p>
+                    <p class="my-0">Search for Mechanic</p>
                 </div>
             </a>
-            <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-                <form class="form" method="GET" action="">
+            <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0">
+                <form method="GET" action="{% url 'mechanics' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">

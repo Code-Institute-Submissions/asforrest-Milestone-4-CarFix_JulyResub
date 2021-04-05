@@ -21,6 +21,7 @@
                         <hr class="w-50 mb-1">
                     </div>
                 </div>
+                {% include 'includes/search-function.html' %}
                 <div class="row">
                     <div class="col">
                     <table class="container-fluid mechanics-table">
@@ -29,6 +30,7 @@
                                 <th>Logo</th>
                                 <th>Brand</th>
                                 <th>Mechanic Name</th>
+                                <th>Year Joined</th>
                                 <th>Rating</th>
                                 <th>Hire</th>
                             </tr>
@@ -52,7 +54,16 @@
                                         </a>
                                     </p>
                                     {% endif %}</td>
-                                <td>{{ mechanic.mechanic_name }}</td>
+                                <td>{% if mechanic.mechanic_name %}
+                                        <small class="text-muted"><i class="fas fa-wrench mr-1"></i>{{ mechanic.mechanic_name }}</small>
+                                    {% else %}
+                                        <small class="text-muted">No name</small>
+                                    {% endif %}</td>
+                                <td>{% if mechanic.year_joined %}
+                                        <small class="text-muted"><i class="fas fa-history mr-1"></i>{{ mechanic.year_joined }}</small>
+                                    {% else %}
+                                        <small class="text-muted">No info</small>
+                                    {% endif %}</td>
                                 <td>{% if mechanic.rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ mechanic.rating }} / 5</small>
                                     {% else %}
