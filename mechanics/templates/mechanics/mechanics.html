@@ -28,10 +28,10 @@
                         <thead>
                             <tr>
                                 <th>Logo</th>
-                                <th>Brand</th>
-                                <th>Mechanic Name</th>
+                                <th><a href="{% url 'mechanics' %}?sort=brand&direction=asc">Brand</a></th>
+                                <th><a href="{% url 'mechanics' %}?sort=mechanic_name&direction=asc">Mechanic Name</a></th>
                                 <th>Year Joined</th>
-                                <th>Rating</th>
+                                <th><a href="{% url 'mechanics' %}?sort=rating&direction=desc">Rating</a></th>
                                 <th>Hire</th>
                             </tr>
                         </thead>
