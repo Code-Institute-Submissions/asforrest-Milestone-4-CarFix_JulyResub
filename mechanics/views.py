@@ -17,7 +17,7 @@ def all_mechanics(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(mechanic_name__icontains=query) | Q(brand__icontains=query)
+            queries = Q(mechanic_name__icontains=query) | Q(primary_car_brand__icontains=query)
             mechanics = mechanics.filter(queries)
 
     context = {
