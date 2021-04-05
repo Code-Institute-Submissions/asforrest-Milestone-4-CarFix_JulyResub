@@ -159,6 +159,14 @@ body {
 
 }
 
+/* ------------------------------- Supplemental CSS */
+
+.mechanic-page-brand-logos {
+    width: 100px;
+}
+
+
+
 /* ------------------------------- Media queries for screen sizes */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
