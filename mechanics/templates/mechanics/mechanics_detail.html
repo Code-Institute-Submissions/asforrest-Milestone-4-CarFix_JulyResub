@@ -30,10 +30,10 @@
                 <div class="mechanic-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ mechanic.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ mechanic.price }}</p>
-                    {% if mechanic.category %}
+                    {% if mechanic.brand %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'mechanics' %}?category={{ mechanic.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ mechanic.category.friendly_name }}
+                        <a class="text-muted" href="">
+                            <i class="fas fa-tag mr-1"></i>{{ mechanic.brand.friendly_name }}
                         </a>
                     </p>
                     {% endif %}
