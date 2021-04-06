@@ -27,10 +27,9 @@
                     <table class="container-fluid mechanics-table">
                         <thead>
                             <tr>
-                                <th>Logo</th>
                                 <th><a href="{% url 'mechanics' %}?sort=brand&direction=asc">Brand</a></th>
-                                <th><a href="{% url 'mechanics' %}?sort=mechanic_name&direction=asc">Mechanic Name</a></th>
-                                <th>Year Joined</th>
+                                <th><a href="{% url 'mechanics' %}?sort=mechanic_name&direction=asc">Mechanic</a></th>
+                                <th><a href="{% url 'mechanics' %}?sort=year_joined&direction=asc">Year Joined</a></th>
                                 <th><a href="{% url 'mechanics' %}?sort=rating&direction=desc">Rating</a></th>
                                 <th>Hire</th>
                             </tr>
@@ -39,23 +38,18 @@
                             {% for mechanic in mechanics %}
                             <tr>
                                 <td class="mechanic-page-brand-logos">{% if mechanic.image %}
-                                    <a href="{% url 'mechanic_detail' mechanic.id %}">
+                                    <a href="{% url 'mechanics'  %}?brands={{ mechanic.brand.name }}">
                                         <img class="card-img-top img-fluid" src="{{ mechanic.image.url }}" alt="{{ mechanic.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ mechanic.name }}">
+                                    <a class="text-muted" href="{% url 'mechanics' %}?brands={{ mechanic.brand.name }}">
+                                        <i class="fas fa-car mr-1"></i>{{ mechanic.brand.friendly_name }}
                                     </a>
                                     {% endif %}</td>
-                                <td>{% if mechanic.brand %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{% url 'mechanics' %}?brand={{ mechanic.brand.name }}">
-                                            <i class="fas fa-car mr-1"></i>{{ mechanic.brand.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}</td>
                                 <td>{% if mechanic.mechanic_name %}
+                                        <a href="{% url 'mechanic_detail' mechanic.id %}">
                                         <small class="text-muted"><i class="fas fa-wrench mr-1"></i>{{ mechanic.mechanic_name }}</small>
+                                        </a>
                                     {% else %}
                                         <small class="text-muted">No name</small>
                                     {% endif %}</td>
