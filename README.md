@@ -160,6 +160,11 @@ After getting the data into JSON file I realised that it wasn't possible to impo
 
 ![Find and replace](/media/bugs/json-to-django-solution-find-and-replace.png)
 
+1. Duplicate data cleaning after creating filters and speeding up loading times
+After creating filters for my mechanics data I realised that I had some duplicate data. Since the mechanics data I used had 1530 rows, removing the duplicate data would leave me with only about 30% of around 500 entries. I've noticed some slow down due to the large number of entries, so removing the extra entries also increases loading times significantly.
+
+![Find and replace](/media/bugs/removing-dubble-data.png)
+
 ## Deployment
 
 This project is saved to a [repository on GitHub](https://github.com/asforrest/KATT-App) and as such is open to the public.

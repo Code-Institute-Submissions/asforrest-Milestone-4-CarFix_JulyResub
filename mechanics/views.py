@@ -30,8 +30,8 @@ def all_mechanics(request):
                     sortkey = f'-{sortkey}'
             mechanics = mechanics.order_by(sortkey)
 
-        if 'brand' in request.GET:
-            brands = request.GET[brand].split[',']
+        if 'brands' in request.GET:
+            brands = request.GET['brands'].split(',')
             mechanics = mechanics.filter(brand__name__in=brands)
             brands = Brand.objects.filter(name__in=brands)
 
