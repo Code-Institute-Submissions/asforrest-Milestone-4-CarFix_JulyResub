@@ -48,14 +48,6 @@
 }
 },
 {
-    "pk": 7,
-    "model": "mechanics.brand",
-    "fields": {
-    "name": "nissan",
-    "friendly_name": "Nissan"
-}
-},
-{
     "pk": 8,
     "model": "mechanics.brand",
     "fields": {

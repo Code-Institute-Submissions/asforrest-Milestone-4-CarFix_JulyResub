@@ -159,6 +159,26 @@ body {
 
 }
 
+/* ------------------------------- Images */
+
+.brand-selector {
+    max-width: 10vw;
+    height: auto;
+    padding: 11px;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.brand-selector:hover {
+    opacity: 1;
+}
+
+.container-brand-selector {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 
 /* ------------------------------- Tables */
 
