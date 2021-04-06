@@ -1,7 +1,7 @@
 <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
     <ul class="nav justify-content-end">
         <li class="nav-item">
-             <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'mechanics' %}" id="find-mechanic-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'mechanics' %}" id="find-mechanic-link" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-search"></i></div>
                     <p class="my-0">Mechanic Overview</p>
@@ -15,12 +15,23 @@
                     <p class="my-0">Brand</p>
                 </div>
             </a>
-            <a href="{% url 'mechanics' %}?sort=mechanic_name&direction=asc" class="dropdown-item">By Mechanic Name</a>
-            <a href="{% url 'mechanics' %}?brands=ford" class="dropdown-item ">Ford via brands</a>
-            <a href="{% url 'mechanics' %}?primary_car_brand=Ford" class="dropdown-item ">Ford via primary_car_brand</a>
+            <div class="dropdown-menu border-0" aria-labelledby="brand-link">
+                <a href="{% url 'mechanics' %}?brands=audi" class="dropdown-item ">Audi</a>
+                <a href="{% url 'mechanics' %}?brands=bmw" class="dropdown-item ">BMW</a>
+                <a href="{% url 'mechanics' %}?brands=ford" class="dropdown-item ">Ford</a>
+                <a href="{% url 'mechanics' %}?brands=honda" class="dropdown-item ">Honda</a>
+                <a href="{% url 'mechanics' %}?brands=hyundai" class="dropdown-item ">Hyundai</a>
+                <a href="{% url 'mechanics' %}?brands=mercedes" class="dropdown-item ">Mercedes</a>
+                <a href="{% url 'mechanics' %}?brands=opel" class="dropdown-item ">Opel</a>
+                <a href="{% url 'mechanics' %}?brands=peugeot" class="dropdown-item ">Peugeot</a>
+                <a href="{% url 'mechanics' %}?brands=porsche" class="dropdown-item ">Porsche</a>
+                <a href="{% url 'mechanics' %}?brands=renault" class="dropdown-item ">Renault</a>
+                <a href="{% url 'mechanics' %}?brands=toyota" class="dropdown-item ">Toyota</a>
+                <a href="{% url 'mechanics' %}?brands=volkswagen" class="dropdown-item ">Volkswagen</a>
+            </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'subscriptions' %}" id="subscriptions-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link logo-font font-weight-bold text-dark" href="{% url 'subscriptions' %}" id="subscriptions-link" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-tags"></i></div>
                     <p class="my-0">Pricing</p>
@@ -28,7 +39,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link logo-font font-weight-bold text-dark" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link logo-font font-weight-bold text-dark" href="#" id="user-options" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-user fa-lg"></i></div>
                     <p class="my-0">My Account</p>
