@@ -12,3 +12,11 @@
         </div>
     </form>
 </div>
+<div class="col">
+    <p class="text-muted mt-3 text-center text-md-right">
+        {% if search_term or current_brands or current_sorting != 'None_None' %}
+            <span class="small"><a href="{% url 'mechanics' %}">Clear search</a> | </span>
+        {% endif %}
+        There are {{ mechanics|length }} mechanics available for your search criteria{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+    </p>
+</div>

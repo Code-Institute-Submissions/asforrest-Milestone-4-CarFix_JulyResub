@@ -23,7 +23,8 @@ def all_mechanics(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 mechanics = mechanics.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'brand':
+                sortkey = 'brand__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
