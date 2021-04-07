@@ -61,7 +61,7 @@
         <li class="nav-item">
             <a class="{% if total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_cart' %}">
                 <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                     <p class="my-0">
                         {% if total %}
                             ${{ total|floatformat:2 }}
