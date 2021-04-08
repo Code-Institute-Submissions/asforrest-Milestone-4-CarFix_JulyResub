@@ -211,6 +211,22 @@ body {
     cursor: pointer;
 }
 
+/* ------------------------------- Messages/Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999;
+}
+
+.custom-toast {
+    overflow: visable;
+}
+.toast-capper {
+    height: 2px;
+}
+
 
 
 /* ------------------------------- Tables */

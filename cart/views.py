@@ -13,13 +13,22 @@ def view_cart(request):
 
 def add_to_cart(request, item_id):
     # View to add quantity to the shopping cart
+    subscrption = get_object_or_404(Subscription, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    if 'subscrption_size' in request.POST:
+        size = request.POST['subscrption_size']
     cart = request.session.get('cart', {})
+
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
+        messages.success(request,
+                            (f'Updated {subscrption.name} '
+                            f'quantity to {cart[item_id]}'))
     else:
         cart[item_id] = quantity
+        messages.success(request, f'Added {subscrption.name} to your cart')
+
     request.session['cart'] = cart
     return redirect(redirect_url)
 
