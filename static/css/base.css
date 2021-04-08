@@ -221,11 +221,11 @@ body {
 
 /* The following table styles have been taken from W3C Schools, source: https://www.w3schools.com/css/css_table_style.asp */
 
-th, td {
+.mechanics-table th, td {
   border-bottom: 1px solid #ddd;
 }
 
-tr:hover {background-color: #DEF2F1;}
+.mechanics-table tr:hover {background-color: #DEF2F1;}
 
 /* ------------------------------- Supplemental CSS */
 
