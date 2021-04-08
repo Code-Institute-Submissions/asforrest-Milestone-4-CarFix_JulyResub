@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
+{% load cart_tools %}
+{% load tax_calculator}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -26,6 +27,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">Order Sumary ({{ subscription_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -62,8 +64,8 @@
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">€{{ total|excluding_tax|floatformat:2 }}</p>
-                        <p class="my-0">€{{ total|nl_tax|floatformat:2 }}</p>
+                        <p class="my-0">€{{ total|floatformat:2 }}</p>
+                        <p class="my-0">€{{ total|floatformat:2 }}</p>
                         <p class="my-0"><strong>€{{ total|floatformat:2 }}</strong></p>
                     </div>
                 </div>

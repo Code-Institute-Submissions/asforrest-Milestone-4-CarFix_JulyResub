@@ -156,7 +156,11 @@ body {
 .card-subscriptions-page {
     padding: 32px;
     background: #DEF2F1;
+    margin: 10px;
+}
 
+.card-subscriptions-page a {
+    text-decoration: none;
 }
 
 /* ------------------------------- Images */

@@ -19,109 +19,115 @@
             </div>
         </div>
         <div class="row">
-            <div class="subscription-container col-12 offest-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for subscription in subscriptions %}
-                        <div class="col-sm-12 col-md-6">
-                            <div class="card h-100 border-0 card-subscriptions-page">
-                                {% if subscription.image %}
-                                <!-- HERE IS THE CURRENT ISSUE WITH THE LINK TO THE SUBSCRIPTION DETAILS, it should return subscriptions/1 -->
-                                <a href="{% url 'subscription_detail' subscription.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ subscription.image.url }}" alt="{{ subscription.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ subscription.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-footer bg-white pt-0 border-0 text-center">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="mt-1 mb-0">
-                                                <p class="lead mb-0 text-center font-weight-bold">{{ subscription.name }}</p>
-                                            </p>
-                                            <p class="mt-1 mb-0">
-                                                <p class="lead mb-0 text-center font-weight-bold">€{{ subscription.price }}</p>
-                                            </p>
-                                            {% if subscription.rating %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ subscription.rating }} / 5</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted">No Rating</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.discounts %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Discounts</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Discounts</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.database_access %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Database Access</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Database Access</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.forum_access %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Forum Access</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Forum Access</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.email_support %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Email Support</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Email Support</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.chat_support %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Chat Support</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Chat Support</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.video_guides %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Guides</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Guides</small>
-                                            </p>
-                                            {% endif %}
-                                            {% if subscription.video_conferencing %}
-                                            <p class="mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Conferencing</small>
-                                            </p>
-                                            {% else %}
-                                            <p class="small mt-1 mb-0">
-                                                <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Conferencing</small>
-                                            </p>
-                                            {% endif %}
+            <div class="col-lg-8 offset-lg-2">
+                <div class="subscription-container col-12 offest-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for subscription in subscriptions %}
+                            <div class="col-sm-12 col-md-6">
+                                <div class="card h-100 border-0 card-subscriptions-page">
+                                    
+                                    {% if subscription.image %}
+                                    <!-- HERE IS THE CURRENT ISSUE WITH THE LINK TO THE SUBSCRIPTION DETAILS, it should return subscriptions/1 -->
+                                    <a href="{% url 'subscription_detail' subscription.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ subscription.image.url }}" alt="{{ subscription.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ subscription.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-footer bg-white pt-0 border-0 text-center">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="mt-1 mb-0">
+                                                    <p class="lead mb-0 text-center font-weight-bold">{{ subscription.name }}</p>
+                                                </p>
+                                                <p class="mt-1 mb-0">
+                                                    <p class="lead mb-0 text-center font-weight-bold">€{{ subscription.price }}</p>
+                                                </p>
+                                                {% if subscription.rating %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ subscription.rating }} / 5</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted">No Rating</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.discounts %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Discounts</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Discounts</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.database_access %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Database Access</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Database Access</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.forum_access %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Forum Access</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Forum Access</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.email_support %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Email Support</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Email Support</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.chat_support %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Chat Support</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Chat Support</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.video_guides %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Guides</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Guides</small>
+                                                </p>
+                                                {% endif %}
+                                                {% if subscription.video_conferencing %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Conferencing</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Conferencing</small>
+                                                </p>
+                                                {% endif %}
+                                                
+                                            </div>
                                         </div>
+                                        <br>
+                                        <a href="{% url 'subscription_detail' subscription.id %}" class="btn btn-main center">More information</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
