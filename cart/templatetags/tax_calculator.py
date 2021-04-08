@@ -11,5 +11,5 @@ def excluding_tax(value):
 
 
 @register.filter
-def excluding_tax2(value):
-    return value - excluding_tax
+def nl_tax(value):
+    return float(value) - float(value) / 1.21
