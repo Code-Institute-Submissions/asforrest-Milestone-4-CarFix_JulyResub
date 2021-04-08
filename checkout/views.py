@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
-from .form import OrderForm
+from .forms import OrderForm
 
 # Create your views here.
 
