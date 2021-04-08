@@ -121,9 +121,8 @@
 
     // remove items on click
     $('.remove-item').click(function(e) {
-        var csfrToken = "{{ csrf_token }}"
+        var csrfToken = "{{ csrf_token }}"
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
         var url = '/cart/remove/$(itemId)';
         var data = {'csrfmiddelwaretoken': csrfToken}
 

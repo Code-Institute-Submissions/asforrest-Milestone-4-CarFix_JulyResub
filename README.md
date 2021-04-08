@@ -153,6 +153,14 @@ When taking the methodology into account the following process has been created:
 
 
 ### Interesting and Ongoing Bugs
+1. IDE Update, Crash, and Repair during 23rd Hour
+During the final week of this project Gitpod updated there systems which made it uncompatible with the Code Institute template and it's elements. After a failed attempt at fixing the issue and reaching out to tutoring support: the solution was to switch to the new environment while the workspace was still running. 
+
+
+1. Requiring expanded versions of jQuery
+I ran into an interesting issue where I needed to use the $.post function from jQuery in order to complete the project in the same maner as the lesson material. I had used the slim minified version which doesn't contain this. The solution was to load full Query.
+
+
 1. Spreadsheet > CSV > JSON > Django (The Creative Solution)
 I had an issue when creating my database of mechanics. This was made in Apple Pages and exported to CSV. From there this was converted to JSON using the online converter [CSV to JSON](https://csvjson.com/csv2json). 
 

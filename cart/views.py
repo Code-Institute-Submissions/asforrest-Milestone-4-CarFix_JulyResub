@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your view
 
@@ -33,3 +33,16 @@ def adjust_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
+
+def remove_from_cart(request, item_id):
+    try:
+        # Adjust the quantity of subscriptions
+        cart = request.session.get('cart', {})
+
+        cart.pop[item_id]
+
+        request.session['cart'] = cart
+        return HtttpResponse(status=200)
+    except Excetpion as e:
+        return HtttpResponse(status=500)
