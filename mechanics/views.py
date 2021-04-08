@@ -13,9 +13,6 @@ def all_mechanics(request):
     sort = None
     direction = None
 
-# This is from the products filtering and searching lessons and is NOT WORKING correctly, this may be due to the disambiguation between primary_car_brand and brand which
-# was used as the foreign key identifier. Although the Botique Ado info is set up in the same manner.
-
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -40,7 +37,7 @@ def all_mechanics(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
-                return redirect(reverse('products'))
+                return redirect(reverse('subscriptions'))
 
             queries = Q(mechanic_name__icontains=query) | Q(primary_car_brand__icontains=query)
             mechanics = mechanics.filter(queries)

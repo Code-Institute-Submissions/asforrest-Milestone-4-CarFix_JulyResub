@@ -55,15 +55,11 @@ def adjust_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 
-
-
-
 def remove_from_cart(request, item_id):
     try:
         # Remove item from shopping cart
         subscription = get_object_or_404(Subscription, pk=item_id)
         cart = request.session.get('cart', {})
-        # ERROR MAY BE COMING FROM HERE, REMOVED SIZING INFO AND NEED TO ADD MESSAGING
         cart.pop(item_id)
         messages.success(request, f'Removed {subscription.name} from your cart')
 
