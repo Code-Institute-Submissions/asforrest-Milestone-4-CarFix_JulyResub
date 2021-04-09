@@ -16,8 +16,6 @@ def add_to_cart(request, item_id):
     subscrption = get_object_or_404(Subscription, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    if 'subscrption_size' in request.POST:
-        size = request.POST['subscrption_size']
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
