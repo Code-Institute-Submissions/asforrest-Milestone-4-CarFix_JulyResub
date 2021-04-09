@@ -43,6 +43,7 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
+            'county': request.POST['county'],
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
@@ -50,7 +51,7 @@ def checkout(request):
             order = order_form.save()(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_bag = json.dumps(bag)
+            order.original_cart = json.dumps(cart)
             order.save()
             for item_id, item_data in cart.items():
                 try:
