@@ -33,6 +33,21 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = shipping_details.phone
+                profile.default_country = shipping_details.address.country
+                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_town_or_city = shipping_details.address.city
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_county = shipping_details.address.state
+                profile.save()
+
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -63,6 +78,7 @@ class StripeWH_Handler:
         else:
             order = None
             try:
+                # Save that an Order happened
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     email=billing_details.email,
@@ -76,8 +92,25 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
+
+
                 for item_id, item_data in json.loads(cart).items():
                     subscription = Subscription.objects.get(id=item_id)
+
+
+                # 2. Figure out how many credits are associated w/ that subscription
+                if username != 'AnonymousUser':
+                    update_user_credits = subscription.credits
+                    
+                    profile.save()
+                
+
+                # 3. query for the UserProfile for the current user
+
+
+                # 4. update the UserPfoile's credits field and add thr new creidts
+
+
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
