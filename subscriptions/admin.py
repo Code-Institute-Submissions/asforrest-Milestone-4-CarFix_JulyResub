@@ -9,6 +9,7 @@ class SubscriptionAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
+        'credits',
         'price',
         'rating',
         'discounts',
