@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from subscriptions.models import Subscription
+from profiles.models import UserProfile
 
 
 class StripeWH_Handler:
@@ -93,22 +95,14 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
 
-
                 for item_id, item_data in json.loads(cart).items():
                     subscription = Subscription.objects.get(id=item_id)
 
-
-                # 2. Figure out how many credits are associated w/ that subscription
-                if username != 'AnonymousUser':
-                    update_user_credits = subscription.credits
-                    
-                    profile.save()
-                
-
-                # 3. query for the UserProfile for the current user
-
-
-                # 4. update the UserPfoile's credits field and add thr new creidts
+                    if username != 'AnonymousUser':
+                        update_user_credits = subscription.credits
+                        print(subscription.credits)
+                        profile.total_credits = profile.total_credits + update_user_credits
+                        profile.save()
 
 
                     if isinstance(item_data, int):
