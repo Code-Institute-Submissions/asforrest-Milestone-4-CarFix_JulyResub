@@ -81,6 +81,10 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
+            'libraries': {
+                'cart': 'cart.templatetags.tax_calculator',
+                'admin.urls': 'django.contrib.admin.templatetags.admin_urls',
+            },
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
