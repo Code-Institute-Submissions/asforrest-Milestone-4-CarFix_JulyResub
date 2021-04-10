@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Subscription, Category
+from .models import Subscription
 from .forms import SubscriptionForm
 
 def all_subscriptions(request):
@@ -90,10 +90,11 @@ def edit_subscription(request, subscription_id):
 
 @login_required
 def delete_subscription(request, subscription_id):
-    """ Delete a subscription in the store """
+    """ Delete a subscription from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
+
     subscription = get_object_or_404(Subscription, pk=subscription_id)
     subscription.delete()
     messages.success(request, 'Subscription deleted!')

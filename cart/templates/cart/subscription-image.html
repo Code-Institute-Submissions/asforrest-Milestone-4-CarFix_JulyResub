@@ -1,0 +1,5 @@
+{% if item.subscription.image %}
+<img class="img-fluid rounded" src="{{ item.subscription.image.url }}" alt="{{ item.subscription.name }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.subscription.name }}">
+{% endif %}

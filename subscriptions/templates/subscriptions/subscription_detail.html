@@ -50,7 +50,7 @@
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
-                    {%.if request.user.is_superuser }
+                    {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_subscription' subscription.id%}">Edit</a>
                             <a href="{% url 'delete_subscription' subscription.id %}" class="text-danger">delete_subscription</a>
