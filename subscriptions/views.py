@@ -54,3 +54,42 @@ def add_subscription(request):
     }
 
     return render(request, template, context)
+
+
+def edit_subscription(request, subscription_id):
+    """ Edit a subscription in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    subscription = get_object_or_404(Subscription, pk=subscription_id)
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST, request.FILES, instance=subscription)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated subscription!')
+            return redirect(reverse('subscription_detail', args=[Subscription.id]))
+        else:
+            messages.error(request,
+                           ('Failed to update Subscription. '
+                            'Please ensure the form is valid.'))
+    else:
+        form = SubscriptionForm(instance=subscription)
+        messages.info(request, f'You are editing {subscription.name}')
+
+    template = 'subscriptions/edit_subscription.html'
+    context = {
+        'form': form,
+        'subscription': subscription,
+    }
+
+    return render(request, template, context)
+
+
+def delete_subscription(request, subscription_id):
+    """ Delete a subscription in the store """
+    subscription = get_object_or_404(Subscription, pk=subscription_id)
+    product.delete()
+    message.success(request, 'Product deleted!' )
+    return redirect(reverse('products'))
+ 
