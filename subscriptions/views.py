@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
-from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 from .models import Subscription, Category
 from .forms import SubscriptionForm
@@ -29,6 +28,8 @@ def subscription_detail(request, subscription_id):
 
     return render(request, 'subscriptions/subscription_detail.html', context)
 
+
+@login_required
 def add_subscription(request):
     """ Add a subscription to the store """
     if not request.user.is_superuser:
@@ -56,6 +57,7 @@ def add_subscription(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_subscription(request, subscription_id):
     """ Edit a subscription in the store """
     if not request.user.is_superuser:
@@ -86,10 +88,13 @@ def edit_subscription(request, subscription_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_subscription(request, subscription_id):
     """ Delete a subscription in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     subscription = get_object_or_404(Subscription, pk=subscription_id)
-    product.delete()
-    message.success(request, 'Product deleted!' )
-    return redirect(reverse('products'))
- 
+    subscription.delete()
+    messages.success(request, 'Subscription deleted!')
+    return redirect(reverse('subscriptions'))
