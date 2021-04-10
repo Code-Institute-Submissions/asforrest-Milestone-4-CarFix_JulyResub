@@ -230,6 +230,11 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 1. Connect Django to S3
 1. Add keys to settings
 1. Go to Heroku and add AWS keys to config vars
+1. Add SECRET_KEY to GitPod
+1. Push to GitHub and Heroku is auto deployed
+1. Got to Amazon S3
+1. Upload Media files
+1. Add stripe webhook to point to Heroku
 
 
 
