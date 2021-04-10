@@ -206,7 +206,10 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 1. Install Gunicorn in gitpop (pip3 install gunicorn)
 1. Create procfile
 1. Add allowed hosts to settings.py
-1. Deploy app by adding and committing changes
+1. Deploy app by adding and committing changes and connecting to Heroku
+1. Login in on the Heroku webportal, connect to GitHub and enable automatic deploys
+1. Generate a Django key and add to Heroku
+
 
 1. Go to Settings for the app and add the configuration variables from env.py, these are the security keys and not shared via Github.
 1. Link GitHub and Heroku via the options under delpoyment in the Heroku web app.
