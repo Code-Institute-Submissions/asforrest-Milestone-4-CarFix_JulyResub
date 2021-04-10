@@ -1,1 +1,1 @@
-web: gunicorn carfix.wsgi:appleication
+web: gunicorn carfix.wsgi:application
