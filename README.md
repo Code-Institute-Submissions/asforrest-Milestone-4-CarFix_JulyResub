@@ -199,11 +199,14 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 1. Create a new app
 1. Install Add-on Heroku Postgres
 1. Go back to gitpod and install dj_database_url (pip3 install dj_database) and psychopg2-binary (pip3 install psychopg2-binary) to use Postgres
-1. Run pip3 freeze > requirements.txt
 1. Setup new dj_database in settings.py
 1. Migrate the database to the new location
 1. Load fixtures into the new database
 1. Create a superuser
+1. Install Gunicorn in gitpop (pip3 install gunicorn)
+1. Create procfile
+1. Add allowed hosts to settings.py
+1. Deploy app by adding and committing changes
 
 1. Go to Settings for the app and add the configuration variables from env.py, these are the security keys and not shared via Github.
 1. Link GitHub and Heroku via the options under delpoyment in the Heroku web app.
