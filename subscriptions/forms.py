@@ -2,7 +2,7 @@ from django import forms
 from .models import Subscription, Category
 
 
-class ProductForm(forms.ModelForm):
+class SubscriptionForm(forms.ModelForm):
 
     class Meta:
         model = Subscription
