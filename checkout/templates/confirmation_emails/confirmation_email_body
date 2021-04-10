@@ -1,0 +1,22 @@
+Dear {{ order.full_name }}!
+
+Thank you for you purchase CarFix. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total: ${{ order.order_total }}
+
+Your order will be shipped to:
+{{ order.street_address1 }}
+{{ order.town_or_city }}, {{ order.country }}.
+
+Phone:
+ {{ order.phone_number }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+CarFix
