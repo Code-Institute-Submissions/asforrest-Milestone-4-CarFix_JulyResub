@@ -127,6 +127,7 @@ class StripeWH_Handler:
                     if username != 'AnonymousUser':
                         update_user_credits = subscription.credits
                         print(subscription.credits)
+                        print(profile.total_credits)
                         profile.total_credits = profile.total_credits + update_user_credits
                         profile.save()
 
