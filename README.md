@@ -179,7 +179,7 @@ This project is saved to a [repository on GitHub](https://github.com/asforrest/K
 
 This project has also been [published to Heroku](https://katt-app.herokuapp.com/) both for evaluation by Code Institute and so that users can access and use the Web App.
 
-### Requiements for Automatic Deployment to Heroku
+### Requiements for  Deployment to Heroku
 
 1. GitHub account
 1. Mongo DB Account
@@ -194,12 +194,21 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 
 ### Steps For Deployment on Heroku
 
-1.  Check that GitHub repisotry is update to date with latest commit.
-1.  Create a free account on Heroku
-1.  Go to Settings for the app and add the configuration variables from env.py, these are the security keys and not shared via Github.
-1.  Link GitHub and Heroku via the options under delpoyment in the Heroku web app.
-1.  Click Deploy
-1.  The App builds and is then available, this app is available via https://katt-app.herokuapp.com/
+1. Check that GitHub repisotry is update to date with latest commit.
+1. Create a free account on Heroku
+1. Create a new app
+1. Install Add-on Heroku Postgres
+1. Go back to gitpod and install dj_database_url (pip3 install dj_database) and psychopg2-binary (pip3 install psychopg2-binary) to use Postgres
+1. Run pip3 freeze > requirements.txt
+1. Setup new dj_database in settings.py
+1. Migrate the database to the new location
+1. Load fixtures into the new database
+1. Create a superuser
+
+1. Go to Settings for the app and add the configuration variables from env.py, these are the security keys and not shared via Github.
+1. Link GitHub and Heroku via the options under delpoyment in the Heroku web app.
+1. Click Deploy
+1. The App builds and is then available, this app is available via https://katt-app.herokuapp.com/
 
 ### Running The Code Locally
 
