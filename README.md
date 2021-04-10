@@ -192,8 +192,9 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
     1. MONGO_URI
     1. MONGO_DB
 
-### Steps For Deployment on Heroku
+### Steps For Deployment on Heroku & AWS with GitHub and GitPod
 
+#### Heroku
 1. Check that GitHub repisotry is update to date with latest commit.
 1. Create a free account on Heroku
 1. Create a new app
@@ -209,12 +210,29 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 1. Deploy app by adding and committing changes and connecting to Heroku
 1. Login in on the Heroku webportal, connect to GitHub and enable automatic deploys
 1. Generate a Django key and add to Heroku
-
-
-1. Go to Settings for the app and add the configuration variables from env.py, these are the security keys and not shared via Github.
-1. Link GitHub and Heroku via the options under delpoyment in the Heroku web app.
+1. Setup hidden key in settings.py
+1. Commit - now it's automatically connected to GitHub
 1. Click Deploy
-1. The App builds and is then available, this app is available via https://katt-app.herokuapp.com/
+1. The App builds and is then available, this app is available via https://asforrest-carfix.herokuapp.com/
+
+#### AWS
+1. Sign up for an account.
+1. Login and open S3
+1. Create a new bucket
+1. Allow public access of the bucket
+1. Turn on static web hosting
+1. On the Permissions tab paste in CORS configuration
+1. Create AWS Policy
+1. Add ARN and bucket policy
+1. Set List Objects to Everyone
+1. Create user, group and policy in IAM
+1. Go to Gitpod and install boto3 (pip3 install boto3) and django-storages (pip3 install django-storages)
+1. Connect Django to S3
+1. Add keys to settings
+1. Go to Heroku and add AWS keys to config vars
+
+
+
 
 ### Running The Code Locally
 

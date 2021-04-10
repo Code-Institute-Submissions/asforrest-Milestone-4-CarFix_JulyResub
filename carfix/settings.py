@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'storages',
     'home',
     'subscriptions',
     'mechanics',
@@ -133,7 +134,7 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
-    } 
+    }
 
 
 # Password validation
@@ -174,6 +175,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'asforrest-carfix'
+    AWS_S3_REGION_NAME = 'eu-central-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_secret_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    STATICFILES_DIRS = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storage.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
