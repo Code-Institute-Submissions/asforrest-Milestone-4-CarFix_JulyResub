@@ -243,6 +243,24 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 
 If you wish to download a copy of the code in order to run the code locally, this is also possible. To do this go to the [KATT repository on GitHub](https://github.com/asforrest/KATT-App) click on 'Code' in the top right and select the method you want to use to download and run the code locally.
 
+#### How to run the code locally using GitPod
+
+Once you obtained the code and forked this off into your own repository you can open it in by linking it to a [GitPod account](www.gitpod.com) and creating a workspace.
+
+Once you've obtained the workspace, follow these steps:
+
+1. Open the new workspace
+1. Install the required programs by installing the apps located in "requirements.txt" do this in the commandline with: pip3 install -r requirements.txt
+1. Migrate the modules to the database, you can do this in the command line with: python3 manage.py migrate
+1. Import all the required data to fill the databases, make sure to use the correct order due to data hierarchy:
+    - python3 manage.py loaddata brands
+    - python3 manage.py loaddata mechanics
+    - python3 manage.py loaddata categories
+    - python3 manage.py loaddata subscriptions
+1. Create a superuser if you want to access the database information with: python3 manage.py createsuperuser
+
+
+
 ### Running The Code Online In Your Own Environment
 
 If you wish to look at or work on the code in an online IDE, then it's recommended to use GitPod. If your using Google Chrome and you install the [Google Chrome GitPod extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki?hl=en) then you will see green 'Gitpod' button above [the repository](https://github.com/Code-Institute-Solutions/readme-template) and this will load the code into your own Gitpod environment.

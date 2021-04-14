@@ -135,8 +135,8 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+        print(profile)
 
-    # possibly enter credits info here
     # Save the user's info
         if save_info:
             profile_data = {

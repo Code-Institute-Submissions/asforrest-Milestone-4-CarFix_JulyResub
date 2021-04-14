@@ -123,15 +123,6 @@ class StripeWH_Handler:
                 for item_id, item_data in json.loads(cart).items():
                     subscription = Subscription.objects.get(id=item_id)
 
-                    # Attempt at trying to get credits to work
-                    if username != 'AnonymousUser':
-                        update_user_credits = subscription.credits
-                        print(subscription.credits)
-                        print(profile.total_credits)
-                        profile.total_credits = profile.total_credits + update_user_credits
-                        profile.save()
-
-
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,

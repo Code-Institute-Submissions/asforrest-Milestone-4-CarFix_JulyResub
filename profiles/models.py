@@ -26,10 +26,6 @@ class UserProfile(models.Model):
                                         null=True, blank=True)
     default_country = CountryField(blank_label='Country',
                                    null=True, blank=True)
-    # attempt credits update
-    total_credits = models.IntegerField(default=0, null=True, blank=True)
-    car_fix_basic = models.BooleanField(default=False)
-    car_fix_pro = models.BooleanField(default=False)
 
     def __str__(self):
         return self.user.username
