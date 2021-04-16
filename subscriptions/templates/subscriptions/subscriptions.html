@@ -58,6 +58,15 @@
                                                     <small class="text-muted">No Rating</small>
                                                 </p>
                                                 {% endif %}
+                                                {% if subscription.video_conferencing %}
+                                                <p class="mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Conferencing</small>
+                                                </p>
+                                                {% else %}
+                                                <p class="small mt-1 mb-0">
+                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Conferencing</small>
+                                                </p>
+                                                {% endif %}
                                                 {% if subscription.discounts %}
                                                 <p class="mt-1 mb-0">
                                                     <small class="text-muted"><i class="fas fa-check mr-1"></i>Discounts</small>
@@ -65,15 +74,6 @@
                                                 {% else %}
                                                 <p class="small mt-1 mb-0">
                                                     <small class="text-muted"><i class="fas fa-times mr-1"></i>Discounts</small>
-                                                </p>
-                                                {% endif %}
-                                                {% if subscription.database_access %}
-                                                <p class="mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Database Access</small>
-                                                </p>
-                                                {% else %}
-                                                <p class="small mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Database Access</small>
                                                 </p>
                                                 {% endif %}
                                                 {% if subscription.forum_access %}
@@ -85,24 +85,6 @@
                                                     <small class="text-muted"><i class="fas fa-times mr-1"></i>Forum Access</small>
                                                 </p>
                                                 {% endif %}
-                                                {% if subscription.email_support %}
-                                                <p class="mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Email Support</small>
-                                                </p>
-                                                {% else %}
-                                                <p class="small mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Email Support</small>
-                                                </p>
-                                                {% endif %}
-                                                {% if subscription.chat_support %}
-                                                <p class="mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Chat Support</small>
-                                                </p>
-                                                {% else %}
-                                                <p class="small mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Chat Support</small>
-                                                </p>
-                                                {% endif %}
                                                 {% if subscription.video_guides %}
                                                 <p class="mt-1 mb-0">
                                                     <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Guides</small>
@@ -110,15 +92,6 @@
                                                 {% else %}
                                                 <p class="small mt-1 mb-0">
                                                     <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Guides</small>
-                                                </p>
-                                                {% endif %}
-                                                {% if subscription.video_conferencing %}
-                                                <p class="mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Conferencing</small>
-                                                </p>
-                                                {% else %}
-                                                <p class="small mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-times mr-1"></i>Video Conferencing</small>
                                                 </p>
                                                 {% endif %}
                                                 {% if request.user.is_superuser %}

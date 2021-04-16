@@ -12,13 +12,10 @@ class SubscriptionAdmin(admin.ModelAdmin):
         'credits',
         'price',
         'rating',
-        'discounts',
-        'database_access',
-        'forum_access',
-        'email_support',
-        'chat_support',
-        'video_guides',
         'video_conferencing',
+        'discounts',
+        'forum_access',
+        'video_guides',
         'image',
     )
 

@@ -29,6 +29,8 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
+    # CREDITS ATTEMPT - adding the variable to the order
+    
 
     def _generate_order_number(self):
         """
