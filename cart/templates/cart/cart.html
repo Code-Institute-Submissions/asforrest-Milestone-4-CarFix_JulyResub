@@ -68,6 +68,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Total Credits</th>
                                 </tr>
                             </thead>
 
@@ -81,13 +82,16 @@
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
-                                    {% include "cart/subscription-info.html" %}
+                                        {% include "cart/subscription-info.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.subscription.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
                                         {% include "cart/quantity-form.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€{{ item.subscription.price|calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.subscription.price|calc_subtotal:item.quantity }}</p>
