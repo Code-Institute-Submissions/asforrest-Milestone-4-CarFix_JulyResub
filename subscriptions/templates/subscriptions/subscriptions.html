@@ -28,7 +28,6 @@
                                 <div class="card h-100 border-0 card-subscriptions-page">
                                     
                                     {% if subscription.image %}
-                                    <!-- HERE IS THE CURRENT ISSUE WITH THE LINK TO THE SUBSCRIPTION DETAILS, it should return subscriptions/1 -->
                                     <a href="{% url 'subscription_detail' subscription.id %}">
                                         <img class="card-img-top img-fluid" src="{{ subscription.image.url }}" alt="{{ subscription.name }}">
                                     </a>
@@ -49,15 +48,6 @@
                                                 <p class="mt-1 mb-0">
                                                     <p class="lead mb-0 text-center font-weight-bold">€ {{ subscription.price }}</p>
                                                 </p>
-                                                {% if subscription.rating %}
-                                                <p class="mt-1 mb-0">
-                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ subscription.rating }} / 5</small>
-                                                </p>
-                                                {% else %}
-                                                <p class="small mt-1 mb-0">
-                                                    <small class="text-muted">No Rating</small>
-                                                </p>
-                                                {% endif %}
                                                 {% if subscription.video_conferencing %}
                                                 <p class="mt-1 mb-0">
                                                     <small class="text-muted"><i class="fas fa-check mr-1"></i>Video Conferencing</small>

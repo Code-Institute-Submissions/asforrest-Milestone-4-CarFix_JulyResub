@@ -11,7 +11,6 @@ class SubscriptionAdmin(admin.ModelAdmin):
         'category',
         'credits',
         'price',
-        'rating',
         'video_conferencing',
         'discounts',
         'forum_access',

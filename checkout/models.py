@@ -29,8 +29,7 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
-    # CREDITS ATTEMPT - adding the variable to the order
-    
+    order_credits = models.IntegerField(null=False, blank=False, default=0)
 
     def _generate_order_number(self):
         """
@@ -45,6 +44,11 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.save()
+
+    def update_credits_total(self):
+        # Attempt at Credits Update
+        self.order_credits = self.lineitems.aggregate(Sum('lineitem_credits'))['lineitem_credits__sum']
         self.save()
 
     def save(self, *args, **kwargs):
@@ -64,6 +68,7 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     subscription = models.ForeignKey(Subscription, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_credits = models.IntegerField(null=False, blank=False, default=0, editable=False)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
@@ -72,6 +77,7 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
         self.lineitem_total = self.subscription.price * self.quantity
+        self.lineitem_credits = self.subscription.credits * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):

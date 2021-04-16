@@ -30,8 +30,6 @@ class Subscription(models.Model):
     discounts = models.BooleanField(default=False, null=False, blank=False)
     forum_access = models.BooleanField(default=False)
     video_guides = models.BooleanField(default=False)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
-                                 blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
