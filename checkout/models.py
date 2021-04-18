@@ -48,7 +48,8 @@ class Order(models.Model):
 
     def update_credits_total(self):
         # Attempt at Credits Update
-        self.order_credits = self.lineitems.aggregate(Sum('lineitem_credits'))['lineitem_credits__sum']
+        self.order_credits = self.lineitems.aggregate(
+            Sum('lineitem_credits'))['lineitem_credits__sum']
         self.save()
 
     def save(self, *args, **kwargs):
