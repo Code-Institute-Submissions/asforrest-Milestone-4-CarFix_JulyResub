@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Mechanic, Brand
 
+from django.contrib.auth.decorators import login_required
+from .forms import MechanicForm
+
 
 def all_mechanics(request):
     # View to show all available mechanics
@@ -64,3 +67,30 @@ def mechanic_detail(request, mechanic_id):
     }
 
     return render(request, 'mechanics/mechanic_detail.html', context)
+
+@login_required
+def hire_mechanic(request):
+    """ Hire a mechanic """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = MechanicForm(request.POST, request.FILES)
+        if form.is_valid():
+            mechanic = form.save()
+            messages.success(request, 'Successfully hired mechanic!')
+            return redirect(reverse('mechanic_detail', args=[mechanic.id]))
+        else:
+            messages.error(request,
+                           ('Failed to hire mechanic. '
+                            'Please ensure the form is valid.'))
+    else:
+        form = MechanicForm()
+
+    template = 'mechanics/hire_mechanic.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
