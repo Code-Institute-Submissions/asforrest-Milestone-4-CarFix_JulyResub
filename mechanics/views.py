@@ -5,6 +5,7 @@ from .models import Mechanic, Brand
 
 from django.contrib.auth.decorators import login_required
 from .forms import MechanicForm
+from profiles.models import UserProfile
 
 
 def all_mechanics(request):
@@ -68,29 +69,8 @@ def mechanic_detail(request, mechanic_id):
 
     return render(request, 'mechanics/mechanic_detail.html', context)
 
-@login_required
 def hire_mechanic(request):
-    """ Hire a mechanic """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    if request.method == 'POST':
-        form = MechanicForm(request.POST, request.FILES)
-        if form.is_valid():
-            mechanic = form.save()
-            messages.success(request, 'Successfully hired mechanic!')
-            return redirect(reverse('mechanic_detail', args=[mechanic.id]))
-        else:
-            messages.error(request,
-                           ('Failed to hire mechanic. '
-                            'Please ensure the form is valid.'))
-    else:
-        form = MechanicForm()
-
-    template = 'mechanics/hire_mechanic.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
+    profile = UserProfile.objects.get(user=request.user)
+    profile.total_credits = profile.total_credits - 1
+    profile.save()
+    return render(request, 'mechanics/hired.html')
