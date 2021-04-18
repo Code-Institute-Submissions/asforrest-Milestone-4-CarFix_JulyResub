@@ -110,7 +110,9 @@ When taking the methodology into account the following process has been created:
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [Kaggle:](https://www.kaggle.com/)
-    - Kaggle has used to get preloaded data to stand in for mechanic data.
+    - Kaggle was used to get preloaded data to stand in for mechanic data.
+1. [Gmail](https://www.gmail.com)
+    - Gmail was used as the email server.
 
 
 
