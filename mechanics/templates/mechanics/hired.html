@@ -20,6 +20,9 @@
                     The mechanic will contact you by email and/or phone to setup an appointment.
                 </p>
                 <p>
+                    <strong>Currently you have {{ total_credits }} credits left.<strong>
+                </p>
+                <p>
                     <a class="btn btn-outline-black rounded-0" href="{% url 'mechanics' %}">Back to Mechanics</a> {{ profile.total_credits }}
                 </p>
             </div>
