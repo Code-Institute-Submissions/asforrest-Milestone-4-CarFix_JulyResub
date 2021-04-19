@@ -10,7 +10,6 @@ This web app aims to solve a real-world problem by assisting users with their fi
 
 ## UX (User Experience)
 
-
 ### User Stories
 
 
@@ -55,6 +54,8 @@ Spliting these out were challenging, but each challenge asked for creative solut
 
 ### Datbase data
 The information obtained for the mechanics database was adapted frmo a dataset from Kaggle. After finding a dataset with 4 columns, I could use 3 of them to stand in for fields needed in my data model. Also by using a Find-and-Replace on the field for "Catefory of celebritites fame" and replacing the variables wih Car brands, I was able to generate a random set of data which would fit my purposes.
+
+Data Source: https://www.kaggle.com/slayomer/forbes-celebrity-100-since-2005
 
 The original fields and my interpretation:
 
@@ -320,7 +321,20 @@ Once you've obtained the workspace, follow these steps:
 
 If you have any questions about this project or updates then you can contact the developer [Alexander Forrest via his GitHub user profile](https://github.com/asforrest) or alternatively you can send an email to [mailto](mailto:asforrest@icloud.com).
 
-## Credits
+## Content / Sources
+The main credits need to be given to the Code Institute for putting together the comprehensive Botique Ado project. 
+
+The main source for this project was the Botique Ado project from the code institute. Code was adpated from this project along the way, with code being copied when it wasn't relevant to be rewritten. The code has been adapted as such that the concepts of Botique Ado are viasble throughout CarFix but so are my own complications and concepts were added along the way to fulfil the user stories.
+
+Other projects have often used multiple sources for reference but the wealth of knowledge in this project has only been supplemented with contact with Tutor Support, to discuss ideas and processes for tackeling problems, Google searchs for more conceptual information, and framework documenation. 
+
+The README.md was constructed with elements from the original template provided by Code Instiute and some elements which are still true for this project have been copied from the README.md of Milestone 2 and Milestone 3 projects also created by Alexander Forrest.
+
+## Media
+
+All stock imagery has been obtained from [unsplash](https://unsplash.com/) and still has the original name including the author in the title of the file.
+
+## Credits & Personal Acknowledgements
 
 ### Family
 Credit needs to be given where credit is due. I would like to thank my wife and daughter for being patient with me during this project. There have been many ups and downs, inluding a death in the family, and illness, but now everything is together, healthy, happy, and focussed on the future. 
@@ -332,24 +346,3 @@ I would like to give a special mention to make knowledgable and empathetic tutor
 
 ### Tutor Support
 A massive thank you to tutor support. Without your assitance and guidance this course would not have been the amazing learning experience that it was. There are a few people I would like to give special mention, this are people who have really helped me along the way and for which I will always be grateful: Michael, Igot, Johann, Time & Kevin.
-
-## Content / Sources
-The main credits need to be given to the Code Institute for putting together the comprehensive Botique Ado project. 
-
-The main source for this project was the Botique Ado project from the code institute. Code was adpated from this project along the way, with code being copied when it wasn't relevant to be rewritten. The code has been adapted as such that the concepts of Botique Ado are viasble throughout CarFix but so are my own complications and concepts were added along the way to fulfil the user stories.
-
-Other projects have often used multiple sources for reference but the wealth of knowledge in this project has only been supplemented with contact with Tutor Support, to discuss ideas and processes for tackeling problems, Google searchs for more conceptual information, and framework documenation. 
-
-The README.md was constructed with elements from the original template provided by Code Instiute and some elements which are still true for this project have been copied from the README.md of Milestone 2 and Milestone 3 projects also created by Alexander Forrest.
-
-### Media
-
-The image used on the homepage is an embedded image hosted on Giphy. This is attributed.
-
-### Personal Acknowledgements
-
-I would like to thank:
-- My mentor Jonathan for his patience, knowledge, experience and support.
-- Kevin, Michael, and all the other tutors at Code Institute, who took the time to check my workspace, my project and lead me towards the answers I was looking for without just giving me the answers.
-- My wife, Alba, for her patience and for taking care of our newborn baby, Zoë, while finishing up this project.
-- Code Institute Student Care for checking in with me, keeping me motivated, and being understanding about the fact that becoming a new father meant that my priorities were split between my studies, work and childcare duties.
