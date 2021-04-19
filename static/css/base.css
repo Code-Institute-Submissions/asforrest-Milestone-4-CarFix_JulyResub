@@ -30,7 +30,7 @@ body {
     width: 1.5rem;
 }
 
-/* ------------------------------- Buttons */
+/* ------------------------------- Logo */
 
 .logo-font {
     text-transform: uppercase;
@@ -38,6 +38,10 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.header-logo {
+    max-width: 8rem;
 }
 
 /* ------------------------------- Buttons */

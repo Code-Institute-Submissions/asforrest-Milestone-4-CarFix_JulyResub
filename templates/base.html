@@ -38,12 +38,12 @@
   <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-2"> <!-- my-auto py-1 py-lg-0 text-center text-lg-left -->
+            <div class="col-12 col-lg-2">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-dark my-0"><strong>Car</strong> Fix</h2>
+                    <img class="header-logo" src="{{ MEDIA_URL }}Car-Fix-Logo.png " alt="Car Fix Logo">
                 </a>
             </div>
-            <div class="col-12 col-lg-10"> <!-- my-auto py-1 py-lg-0 text-right -->
+            <div class="col-12 col-lg-10">
                 <nav class="navbar navbar-expand-lg navbar-light float-right">
                     {% include 'includes/main-nav.html' %}
                 </nav>
@@ -57,7 +57,7 @@
         <div id="top-banner" class="row text-center">
             <div class="col bg-marketing-header text-white">
                 <!-- Edit and reuse for a date/timer? -->
-                <h4 class="logo-font my-3">Welcome {{ user }} you currently have {{ total_credits }} credits</h4>
+                <h4 class="logo-font my-3">Welcome <strong>{{ user }}</strong> you currently have {{ total_credits }} <strong>credits</strong></h4>
             </div>            
         </div>
     </header>

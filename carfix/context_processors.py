@@ -7,4 +7,4 @@ def total_credits(request):
         total_credits = profile.total_credits
         return {"total_credits" : total_credits}
     else:
-        return {"total_credits" : "No Credit"}
+        return {"total_credits" : "No"}
