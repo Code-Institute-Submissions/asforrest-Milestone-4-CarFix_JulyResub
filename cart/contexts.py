@@ -8,7 +8,7 @@ def cart_contents(request):
     total = 0
     subscription_count = 0
     subscription_credits_count = 0
-    total_credits = 0
+    total_cart_credits = 0
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():
@@ -16,7 +16,7 @@ def cart_contents(request):
         total += quantity * subscription.price
         subscription_count += quantity
         # WORKING HERE
-        total_credits += quantity * subscription.credits
+        total_cart_credits += quantity * subscription.credits
         subscription_credits_count += quantity
         # WORKING HERE
         cart_items.append({
@@ -31,5 +31,6 @@ def cart_contents(request):
         'total': total,
         'subscription_count': subscription_count,
         'subscription_credits_count': subscription_credits_count,
+        'total_cart_credits': total_cart_credits,
     }
     return context
