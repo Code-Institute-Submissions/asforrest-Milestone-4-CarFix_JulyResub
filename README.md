@@ -208,7 +208,9 @@ This was validated in the IDE. No errors where found.
 
 #### Python Validation
 
+![Python Validation](/media/readme-images/CarFix-python-validation.png "Python Validation")
 
+All the python files where checked in http://pep8online.com/checkresult and the only errors still remaining are that some statements that go beyond the PEP8 79 char guideline. Due to the project needing to be submitted within the next hour this time will be used to focus on beautification of the HTML/CSS.
 
 ### Interesting and Ongoing Bugs
 1. IDE Update, Crash, and Repair during 23rd Hour - 1st round
@@ -348,4 +350,4 @@ So this project is dedicated to my family. This Covid-19 Pandemic has revealed w
 I would like to give a special mention to make knowledgable and empathetic tutor Jonathan Munz. Thank you Jonathan for guiding me and being someone I can bounce ideas and concepts off, while keeping my grounded in reality.
 
 ### Tutor Support
-A massive thank you to tutor support. Without your assitance and guidance this course would not have been the amazing learning experience that it was. There are a few people I would like to give special mention, this are people who have really helped me along the way and for which I will always be grateful: Michael, Igot, Johann, Time & Kevin.
+A massive thank you to tutor support. Without your assitance and guidance this course would not have been the amazing learning experience that it was. There are a few people I would like to give special mention, this are people who have really helped me along the way and for which I will always be grateful: Michael, Igot, Johann, Tim, Kevin & Cormac.
