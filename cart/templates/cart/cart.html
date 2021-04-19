@@ -38,7 +38,7 @@
                         {% for item in cart_items %}
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-2">
-                                    {% include "cart/subscription-image.html" %}
+                                    {% include "cart/subscription-images.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 mb-2">
                                     {% include "cart/subscription-info.html" %}
@@ -75,17 +75,13 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.subscription.image %}
-                                            <img src="{{ item.subscription.image.url }}" alt="{{ item.subscription.name }}" class="img-fluid rounded">
-                                        {% else %}
-                                            <img src="{{ MEDIA_URL }}noimpage.png" alt="{{ item.subscription.name }}" class="img-fluid rounded">
-                                        {% endif %}
+                                        {% include "cart/subscription-images.html" %}
                                     </td>
                                     <td class="py-3">
                                         {% include "cart/subscription-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.subscription.price }}</p>
+                                        {% include "cart/subscription-info.html" %}
                                     </td>
                                     <td class="py-3">
                                         {% include "cart/quantity-form.html" %}
