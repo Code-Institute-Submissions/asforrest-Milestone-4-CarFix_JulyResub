@@ -136,13 +136,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # ATTEMPT @ Attaching credit upate of profile.total_credits
-        # 1. Get the number of credits from the order after order is successful
-        # 2. Get the number of credits fromt he user
-        # 3. sum the users
-        # 4. save to profile
-
-        # CREDITS ATTEMPT - webhook handler at trying to get credits to work
+        # CREDITS TOTAL
         profile.total_credits = profile.total_credits + order.order_credits
         profile.save()
 
