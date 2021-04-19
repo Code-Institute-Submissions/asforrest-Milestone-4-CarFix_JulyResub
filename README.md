@@ -11,7 +11,7 @@ This web app aims to solve a real-world problem by assisting users with their fi
 ## UX (User Experience)
 
 ### User Stories
-
+![CarFix User Stories](/media/readme-images/CarFix-UserStories.png "CarFix User Stories")
 
 ### Wireframes
 The following are wireframes for the 2 main streams on the site. Purchasing a subscription and hiring a mechanic.
