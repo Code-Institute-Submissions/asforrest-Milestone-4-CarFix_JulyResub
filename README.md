@@ -206,23 +206,29 @@ Testing steps:
 
 
 ### Interesting and Ongoing Bugs
-1. IDE Update, Crash, and Repair during 23rd Hour
-During the final week of this project Gitpod updated there systems which made it uncompatible with the Code Institute template and it's elements. After a failed attempt at fixing the issue and reaching out to tutoring support: the solution was to switch to the new environment while the workspace was still running. 
+1. IDE Update, Crash, and Repair during 23rd Hour - 1st round
+During the final week of this project Gitpod updated there systems which made it uncompatible with the Code Institute template and it's elements. After a failed attempt at fixing the issue and reaching out to tutoring support: the solution was to switch to the new environment while the workspace was still running.
+
+This however set development back 2 days. To compound this issue my wife was ill and due to the circumstances I was given another 10 days to finish the project without a penalty.
 
 
 1. Requiring expanded versions of jQuery
-I ran into an interesting issue where I needed to use the $.post function from jQuery in order to complete the project in the same maner as the lesson material. I had used the slim minified version which doesn't contain this. The solution was to load full Query.
+I ran into an interesting issue where I needed to use the $.post function from jQuery in order to complete the project in the same maner as the contained in the lesson material. However dude to using a slim minified version of the CDN, this doesn't contain this that function. 
+
+The solution was to edit the CDN I was targeting and load the full minified version of jQuery.
 
 
-1. Spreadsheet > CSV > JSON > Django (The Creative Solution)
-I had an issue when creating my database of mechanics. This was made in Apple Pages and exported to CSV. From there this was converted to JSON using the online converter [CSV to JSON](https://csvjson.com/csv2json). 
+1. Spreadsheet > CSV > JSON > Django (Creative Solution)
+I had an issue when creating the database of mechanics. This was made in Apple Pages and exported to CSV. From there this was converted to JSON using the online converter [CSV to JSON](https://csvjson.com/csv2json). 
 
-After getting the data into JSON file I realised that it wasn't possible to import this so I though of a creative solution. I created an extra column for "field" with the value of "{" and then procdeeded to use find and replace to fix the rest of the syntax so that the JSON file would be correctly formatted to be important as a Django Fixture.
+After getting the data into JSON file I realised that it wasn't possible to import it so I though of a creative solution. I created an extra column for "fields" with the value of "{" and then procdeeded to use find and replace to fix the rest of the syntax and add the closing "}" at the end of each statement so that the JSON file would be correctly formatted to be important as a Django Fixture.
 
 ![Find and replace](/media/bugs/json-to-django-solution-find-and-replace.png)
 
 1. Duplicate data cleaning after creating filters and speeding up loading times
-After creating filters for my mechanics data I realised that I had some duplicate data. Since the mechanics data I used had 1530 rows, removing the duplicate data would leave me with only about 30% of around 500 entries. I've noticed some slow down due to the large number of entries, so removing the extra entries also increases loading times significantly.
+After creating filters for my mechanics data I realised that I had some duplicate data. Since the mechanics data I used had 1530 rows, removing the duplicate data would leave me with only about 30% of around 500 entries.
+
+I also noticed the database was slow with such a large number of entries, so removing the extra entries also increases loading times significantly.
 
 ![Find and replace](/media/bugs/removing-dubble-data.png)
 
@@ -289,16 +295,13 @@ This project has also been [published to Heroku](https://katt-app.herokuapp.com/
 1. Upload Media files
 1. Add stripe webhook to point to Heroku
 
-
-
-
 ### Running The Code Locally
 
 If you wish to download a copy of the code in order to run the code locally, this is also possible. To do this go to the [KATT repository on GitHub](https://github.com/asforrest/KATT-App) click on 'Code' in the top right and select the method you want to use to download and run the code locally.
 
 #### How to run the code locally using GitPod
 
-Once you obtained the code and forked this off into your own repository you can open it in by linking it to a [GitPod account](www.gitpod.com) and creating a workspace.
+If you wish to look at or work on the code in an online IDE, then it's recommended to use GitPod. If your using Google Chrome and you install the [Google Chrome GitPod extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki?hl=en) then you will see green 'Gitpod' button above [the repository](https://github.com/Code-Institute-Solutions/readme-template) and this will load the code into your own Gitpod environment.
 
 Once you've obtained the workspace, follow these steps:
 
@@ -311,12 +314,7 @@ Once you've obtained the workspace, follow these steps:
     - python3 manage.py loaddata categories
     - python3 manage.py loaddata subscriptions
 1. Create a superuser if you want to access the database information with: python3 manage.py createsuperuser
-
-
-
-### Running The Code Online In Your Own Environment
-
-If you wish to look at or work on the code in an online IDE, then it's recommended to use GitPod. If your using Google Chrome and you install the [Google Chrome GitPod extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki?hl=en) then you will see green 'Gitpod' button above [the repository](https://github.com/Code-Institute-Solutions/readme-template) and this will load the code into your own Gitpod environment.
+1. run the server with: python3 manage.py runserver
 
 ## Contact
 
@@ -324,20 +322,25 @@ If you have any questions about this project or updates then you can contact the
 
 ## Credits
 
-The following is an overview of credits for the different people and sources used.
+### Family
+Credit needs to be given where credit is due. I would like to thank my wife and daughter for being patient with me during this project. There have been many ups and downs, inluding a death in the family, and illness, but now everything is together, healthy, happy, and focussed on the future. 
 
-### Content / Sources
+So this project is dedicated to my family. This Covid-19 Pandemic has revealed what is important in life. They have been as much a part of getting this done by supporting me as I have done myself.
 
-The following were done in conjunction with the code institute lessons:
-1. Installation and setup of django-allauth
-1. 
+### Mentor
+I would like to give a special mention to make knowledgable and empathetic tutor Jonathan Munz. Thank you Jonathan for guiding me and being someone I can bounce ideas and concepts off, while keeping my grounded in reality.
 
+### Tutor Support
+A massive thank you to tutor support. Without your assitance and guidance this course would not have been the amazing learning experience that it was. There are a few people I would like to give special mention, this are people who have really helped me along the way and for which I will always be grateful: Michael, Igot, Johann, Time & Kevin.
 
-All sources used have been documented throughout the code in the website through the use of comments. The structure of these comment starts with an explanation of what has been adapted for this project and then the source is given.
+## Content / Sources
+The main credits need to be given to the Code Institute for putting together the comprehensive Botique Ado project. 
 
-The main source for this project was the mini-project from the code institute. This project deals with creating a Task Manager app. The data model is similar to the data model for KATT and was therefore used to create the main structure after an design was decided upon.
+The main source for this project was the Botique Ado project from the code institute. Code was adpated from this project along the way, with code being copied when it wasn't relevant to be rewritten. The code has been adapted as such that the concepts of Botique Ado are viasble throughout CarFix but so are my own complications and concepts were added along the way to fulfil the user stories.
 
-The README.md was constructed with elements from the original template provided by Code Instiute and some elements which are still true for this project have been copied from the README.md of Milestone 2 project also created by Alexander Forrest.
+Other projects have often used multiple sources for reference but the wealth of knowledge in this project has only been supplemented with contact with Tutor Support, to discuss ideas and processes for tackeling problems, Google searchs for more conceptual information, and framework documenation. 
+
+The README.md was constructed with elements from the original template provided by Code Instiute and some elements which are still true for this project have been copied from the README.md of Milestone 2 and Milestone 3 projects also created by Alexander Forrest.
 
 ### Media
 
