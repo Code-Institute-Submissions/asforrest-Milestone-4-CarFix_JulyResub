@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Subscription
 from .forms import SubscriptionForm
 
+
 def all_subscriptions(request):
     # View to show subscription comparison
 

@@ -69,6 +69,7 @@ def mechanic_detail(request, mechanic_id):
 
     return render(request, 'mechanics/mechanic_detail.html', context)
 
+
 def hire_mechanic(request):
     profile = UserProfile.objects.get(user=request.user)
     profile.total_credits = profile.total_credits - 1

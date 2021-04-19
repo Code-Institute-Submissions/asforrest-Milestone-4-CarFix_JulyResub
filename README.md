@@ -26,7 +26,6 @@ These have been supplemented with a color palette found on [Visme](https://visme
 
 ![Color-Palette](/media/readme-images/Color-Palette.png "Color-Palette")
 
-
 ### Fonts
 The font-family used for this website comes from Google Fonts and is a sans-serif font: 'Source Sans Pro'. This font is professional font and fits well.
 
@@ -38,7 +37,6 @@ The Frameworks chosen for this project are:
 1. Code Institutes' Botique Ado Project - this was used for the basic stucture and as inspiration for the backbone and form of the site.
 
 ## Methodolgy
-
 This final section of the Full Stack Development course at the Code Institute covers a lot of different aspects. From database management, webstore logic, defensive programming, and also builds upon all of the materials learnt during previous sections.
 
 Therefore when planning for this project a clear decision was made to use the Botique Ado's structure as a basis for the project and use the lesson materials as inspiration in which to build my own ideas and data models.
@@ -66,7 +64,6 @@ Category of celebrities fame = Brand (this will be changed with Find-and-Replace
 
 
 ### Python Database Migrations
-
 Before preforming any migrations to the Python database Dry Run's were utilized to make sure that there were no errors first.
 
 ![Migrations Dry Run](/media/readme-images/making-migrations-dry-run.png)
@@ -122,7 +119,6 @@ When taking the methodology into account the following process has been created:
 -   [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engines))
 
 ### Frameworks, Libraries & Programs Used
-
 1. [DJango Frameworks:](https://.com/)
     - Django was .
 1. [Python3:](https://.com/)
@@ -196,14 +192,22 @@ Testing steps:
 
 #### CSS Validation
 
+![CSS Validation](/media/readme-images/CarFix-css-validation.png "CSS Validation")
+
+The validation of the CSS showed a few warnings, however I don't have a problem with the border matching the background colours on these elements. The error is in the allauth code, I haven't had an problems while using the paltform so I won't worry about this error for the moment.
 
 #### HTML Validation
 
+![HTML Validation](/media/readme-images/CarFix-html-validation.png "HTML Validation")
+
+The validation of the HTML is actually very clean. There was a small issie with li no being able to be the child of the nav element in this context, but this is again not an app breaking bug. So will currently not be changed.
 
 #### JavaScript Validation
 
+This was validated in the IDE. No errors where found.
 
 #### Python Validation
+
 
 
 ### Interesting and Ongoing Bugs
@@ -240,7 +244,6 @@ This project is saved to a [repository on GitHub](https://github.com/asforrest/K
 This project has also been [published to Heroku](https://katt-app.herokuapp.com/) both for evaluation by Code Institute and so that users can access and use the Web App.
 
 ### Requiements for  Deployment to Heroku
-
 1. GitHub account
 1. Mongo DB Account
 1. Heroku account

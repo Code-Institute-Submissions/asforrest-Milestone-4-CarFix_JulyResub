@@ -20,7 +20,8 @@ class Brand(models.Model):
 
 
 class Mechanic(models.Model):
-    # on_delete=models.SET_NULL allows a brand to be deleted without it deleting the mechanic
+    # on_delete=models.SET_NULL allows a brand to be deleted 
+    # without it deleting the mechanic
     brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
     mechanic_name = models.CharField(max_length=254)
     primary_car_brand = models.CharField(max_length=254)
