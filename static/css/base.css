@@ -442,4 +442,19 @@ body {
         width: 80px;
         padding: 10px 20px 10px 0px;
     }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-main.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-main.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
 }
