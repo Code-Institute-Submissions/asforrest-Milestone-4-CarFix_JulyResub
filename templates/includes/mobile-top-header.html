@@ -3,12 +3,22 @@
 </a>
 
 <li class="list-inline-item">
-    <a class="text-dark nav-link d-block d-lg-none" href="{% url 'mechanics' %}" id="mobile-mechanics-link" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Mechanic</p>
-        </div>
-    </a>
+    {% if request.user.is_authenticated %}
+        <a class="text-dark nav-link d-block d-lg-none" href="{% url 'mechanics' %}" id="mobile-mechanics-link" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-search fa-lg"></i></div>
+                <p class="my-0">Mechanic</p>
+            </div>
+        </a>
+    {% else %}
+        <!-- Trigger Modal here -->
+        <a class="text-dark nav-link d-block d-lg-none" data-toggle="modal" href="#notLoggedIn" id="mechanics-link-false" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-search fa-lg"></i></div>
+                <p class="my-0">Mechanics</p>
+            </div>
+        </a>
+    {% endif %}
 </li>
 <li class="list-inline-item">
     <a class="text-dark nav-link d-block d-lg-none" href="{% url 'subscriptions' %}" id="mobile-subscriptions-link" aria-haspopup="true" aria-expanded="false">
@@ -52,3 +62,13 @@
         </div>
     </a>
 </li>
+
+{% block postloadjs %}
+<script>
+    $(document).ready(function(){
+      $("#notLoggedIn").click(function(){
+        $("#notLoggedInModal").modal();
+      });
+    });
+    </script>
+{% endblock %}

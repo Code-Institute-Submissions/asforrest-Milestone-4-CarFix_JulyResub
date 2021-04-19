@@ -44,6 +44,13 @@ body {
     max-width: 8rem;
 }
 
+/* ------------------------------- Modal */
+
+.modal-backdrop {
+    z-index: -10000 !important; 
+}
+
+
 /* ------------------------------- Buttons */
 .btn-main {
     background: #17252A;
