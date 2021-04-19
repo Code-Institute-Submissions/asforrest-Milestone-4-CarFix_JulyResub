@@ -12,8 +12,8 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-2-lg col-0-md"></div>
+        <div class="col-8-lg col-12-md">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col text-center mt-3">
@@ -60,13 +60,13 @@
                                         <small class="text-muted">No info</small>
                                     {% endif %}</td>
                                 <td>{% if mechanic.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ mechanic.rating }} / 5</small>
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ mechanic.rating }}</small>
                                     {% else %}
                                         <small class="text-muted">No Rating</small>
                                     {% endif %}</td>
 
                                 <td>
-                                    <a href="{% url 'mechanic_detail' mechanic.id %}" class="btn btn-main">More Details</a>
+                                    <a href="{% url 'mechanic_detail' mechanic.id %}" class="btn btn-main">Enquire</a>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-2-lg col-0-md"></div>
     </div>
     <div class="btt-button shadow-sm rounded-0 border border-black">
         <a class="btt-link d-flex h-100">

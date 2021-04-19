@@ -380,7 +380,7 @@ body {
     border-radius: 0;
 }
 
-/* ------------------------------- Supplemental CSS */
+/* ------------------------------- Brand Logos */
 
 .mechanic-page-brand-logos {
     width: 140px;
@@ -436,5 +436,10 @@ body {
 
     #top-banner h4{
         font-size: .9rem;
+    }
+
+    .mechanic-page-brand-logos {
+        width: 80px;
+        padding: 10px 20px 10px 0px;
     }
 }

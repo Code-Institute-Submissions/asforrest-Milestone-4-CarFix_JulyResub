@@ -83,6 +83,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
+                'carfix.context_processors.total_credits'
             ],
             'libraries': {
                 'cart': 'cart.templatetags.tax_calculator',
