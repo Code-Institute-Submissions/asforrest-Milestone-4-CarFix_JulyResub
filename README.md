@@ -1,6 +1,6 @@
 # Full Stack Frameworks Milestone Project: CarFixPro
 
-This project has been [deployed to GitHub Pages](https://asforrest.github.io/) and the source code is available in a [repository on GitHub](https://github.com/asforrest/milestone-2-budgetcalc)
+This project has been [deployed to GitHub Pages](https://asforrest.github.io/) and the source code is available in a [repository on GitHub](https://github.com/asforrest/)
 
 This is a web app created for the 2nd Milestone Project for [Code Institute course: Full Stack Development](https://codeinstitute.net/full-stack-software-development-diploma/).
 
@@ -243,7 +243,7 @@ I also noticed the database was slow with such a large number of entries, so rem
 
 This project is saved to a [repository on GitHub](https://github.com/asforrest/KATT-App) and as such is open to the public.
 
-This project has also been [published to Heroku](https://katt-app.herokuapp.com/) both for evaluation by Code Institute and so that users can access and use the Web App.
+This project has also been [published to Heroku](https://asforrest-carfix.herokuapp.com/) both for evaluation by Code Institute and so that users can access and use the Web App.
 
 ### Requiements for  Deployment to Heroku
 1. GitHub account

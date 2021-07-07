@@ -12,7 +12,6 @@
 "forum_access": true,
 "video_guides": false,
 "category": 1,
-"rating": 3,
 "image_url": "https://i.ibb.co/QY091Wf/Car-Fix-Logo.png",
 "image": "Car-Fix-Logo.png"
 }
@@ -31,7 +30,6 @@
 "forum_access": true,
 "video_guides": true,
 "category": 1,
-"rating": 5,
 "image_url":  "https://i.ibb.co/zFjjGjF/Car-Fix-Pro-Logo.png",
 "image": "Car-Fix-Pro-Logo.png"
 }
