@@ -241,7 +241,7 @@ I also noticed the database was slow with such a large number of entries, so rem
 
 ## Deployment
 
-This project is saved to a [repository on GitHub](https://github.com/asforrest/KATT-App) and as such is open to the public.
+This project is saved to a [repository on GitHub](https://github.com/asforrest/Milestone-4-CarFix) and as such is open to the public.
 
 This project has also been [published to Heroku](https://asforrest-carfix.herokuapp.com/) both for evaluation by Code Institute and so that users can access and use the Web App.
 
@@ -303,7 +303,7 @@ This project has also been [published to Heroku](https://asforrest-carfix.heroku
 
 ### Running The Code Locally
 
-If you wish to download a copy of the code in order to run the code locally, this is also possible. To do this go to the [KATT repository on GitHub](https://github.com/asforrest/KATT-App) click on 'Code' in the top right and select the method you want to use to download and run the code locally.
+If you wish to download a copy of the code in order to run the code locally, this is also possible. To do this go to the [CarFix repository on GitHub](https://github.com/asforrest/Milestone-4-CarFix) click on 'Code' in the top right and select the method you want to use to download and run the code locally.
 
 #### How to run the code locally using GitPod
 
