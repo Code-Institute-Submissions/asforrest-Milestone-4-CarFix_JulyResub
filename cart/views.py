@@ -12,11 +12,15 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
+    if request.POST.get('quantity') == "":
+        return redirect(reverse('subscription_detail', args=[item_id]))
+
     # View to add quantity to the shopping cart
     subscrption = get_object_or_404(Subscription, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
+
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
@@ -32,11 +36,16 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
+    if request.POST.get('quantity') == "":
+        return redirect(reverse('view_cart'))
+
+
     # Adjust the quantity of subscriptions
     subscription = get_object_or_404(Subscription, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
     print(quantity)
+
 
     if quantity > 0:
         cart[item_id] = quantity
